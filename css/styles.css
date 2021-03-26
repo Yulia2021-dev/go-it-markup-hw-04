@@ -10,6 +10,7 @@
     --base-size: 16px;
     --soft-box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     --small-circled: 4px;
+    --soft-grey-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #6B5F5F 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
 }
 
 html {
@@ -116,7 +117,19 @@ address {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-    background-color: var(--dark-bg-color);
+    background-color: rgba(47, 48, 58, 0.4);
+}
+
+.banner {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: top right, center;
+    background-repeat: no-repeat;
+    background-color: var(--soft-grey-bg-gradient);
 }
 
 .features {
@@ -179,8 +192,7 @@ address {
 }
 
 .secondary-nav {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .site-nav {
@@ -247,6 +259,13 @@ address {
     margin-bottom: 10px;
 }
 
+.page-title-text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-color);
+}
+
 .section-title {
     font-weight: 700;
     font-size: 36px;
@@ -311,6 +330,7 @@ address {
 
 .footer-contacts {
     font-style: normal;
+    font-size: 14px;
 }
 
 .footer-contacts-item:not(:last-child) {
@@ -375,7 +395,16 @@ footer .logo {
     flex-wrap: wrap;
 }
 
-.grid-item {
+.grid a {
+    text-decoration: none;
+}
+
+.main-section {
+    padding-top: 95px;
+    padding-bottom: 90px;
+}
+
+.business-card {
     width: 370px;
     margin-right: 30px;
     margin-bottom: 30px;
