@@ -221,10 +221,6 @@ address {
     transform: translateY(2px);
 }
 
-.button:focus {
-    outline: none;
-}
-
 .secondary-nav {
     margin-bottom: 50px;
 }
@@ -265,7 +261,7 @@ address {
     outline: none;
 }
 
-.filter-btn:hover {
+.filter-btn:hover, .filter-btn:focus {
     background-color: #2196f3;
     color: var(--main-bg-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -334,9 +330,9 @@ address {
 }
 
 .person {
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 3%;
+    line-height: 1.187;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -344,7 +340,8 @@ address {
 .team-item {
     font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.187;
+    margin-bottom: 16px;
     text-align: center;
     color: var(--secondary-color);
 }
@@ -361,6 +358,7 @@ address {
 }
 
 .team-card-body {
+    background-color:var(--main-bg-color);
     padding: 30px;
 }
 
@@ -381,7 +379,6 @@ address {
     height: 44px;
 }
 
-
 .social-icons-item {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
@@ -397,6 +394,9 @@ address {
     fill: var(--icons-text-color);
 }
 
+footer .social-icons .icon {
+    fill:var(--main-bg-color)
+}
 .social-icons-link:hover .icon, .social-icons-link:focus .icon {
     fill: var(--main-bg-color);
 }
@@ -406,19 +406,28 @@ address {
     background-color: var(--accent-color);
 }
     
-.customers-list-item {
+.customers-list-item  {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 170px;
     height: 90px;
-    left: 215px;
-    top: 2493px;
     border: 1px solid #AFB1B8;
-    box-sizing: border-box;
     border-radius: 4px;
-    margin-top: 50px;
-    margin-bottom: 94px;
+}
+
+.customers-list-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+    border-radius: 4px;
+}
+
+.customers-list-link:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .customers-list-item:hover, .customers-list-item:focus {
@@ -443,6 +452,7 @@ address {
 }
 
 .join-social-links {
+    margin-left: 70px;
     flex-basis: calc((50% - 45px) / 2);
 }
 
@@ -489,7 +499,6 @@ footer .logo {
 
 .footer-container {
     display: block;
-   
 }
 
 .logo {
