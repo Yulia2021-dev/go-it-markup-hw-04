@@ -369,10 +369,6 @@ address {
     background-color: var(--accent-color);
 }
 
-.icon {
-    fill: var(--accent-color);
-}
-
 .social-icons .icon {
     width: 20px;
     height: 20px;
