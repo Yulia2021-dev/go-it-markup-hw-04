@@ -120,7 +120,7 @@
       <section class="works">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
-          <ul class="list image-grid">
+          <ul class="list flex-container">
             <li><img src="./images/features1.jpg" alt="Проектирование" /></li>
             <li><img src="./images/features2.jpg" alt="Дизайн" /></li>
             <li><img src="./images/features3.jpg" alt="Редакция" /></li>
@@ -136,7 +136,7 @@
               <div class="team-card-body">
                 <h3 class="person">Игорь Демьяненко</h3>
                 <p class="team-item">Product Designer</p>
-                <ul class="list social-icons">
+                <ul class="list social-icons flex-container">
                   <li class="social-icons-item">
                     <a
                       href=""
@@ -201,7 +201,7 @@
               <div class="team-card-body">
                 <h3 class="person">Ольга Репина</h3>
                 <p class="team-item">Frontend Developer</p>
-                <ul class="list social-icons">
+                <ul class="list social-icons flex-container">
                   <li class="social-icons-item">
                     <a
                       href=""
@@ -266,7 +266,7 @@
               <div class="team-card-body">
                 <h3 class="person">Николай Тарасов</h3>
                 <p class="team-item">Marketing</p>
-                <ul class="list social-icons">
+                <ul class="list social-icons flex-container">
                   <li class="social-icons-item">
                     <a
                       href=""
@@ -331,7 +331,7 @@
               <div class="team-card-body">
                 <h3 class="person">Михаил Ермаков</h3>
                 <p class="team-item">UI Designer</p>
-                <ul class="list social-icons">
+                <ul class="list social-icons flex-container">
                   <li class="social-icons-item">
                     <a
                       href=""
@@ -475,15 +475,14 @@
       </section>
     </main>
     <!-- Подвал -->
-    <footer>
-      <div class="container">
-        <div class="footer-flex-container">
+    <footer class="footer">
+      <div class="container flex-container flex-c">
           <!-- Block 1 -->
           <div class="contacts-with-logo">
             <a class="link logo" href="index.html">
               <span class="logo-highlight">Web</span>Studio
             </a>
-            <address class="footer-contacts">
+            <address>
               <p class="footer-contacts-item">г. Киев, пр-т Леси Украинки, 26</p>
               <ul class="list">
                 <li class="footer-contacts-item">
@@ -500,7 +499,7 @@
           <!-- Block 2 -->
           <div class="join-social-links">
             <h3 class="join-text">Присоединяйтесь</h3>
-            <ul class="list social-icons">
+            <ul class="list flex-container social-icons">
               <li class="social-icons-item">
                 <a
                   href=""
@@ -508,7 +507,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg class="icon footer-icons">
+                  <svg class="icon">
                     <use href="./images/icons/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
@@ -520,7 +519,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg class="icon footer-icons">
+                  <svg class="icon">
                     <use href="./images/icons/sprite.svg#icon-twitter"></use>
                   </svg>
                 </a>
@@ -532,7 +531,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg class="icon footer-icons">
+                  <svg class="icon">
                     <use href="./images/icons/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
@@ -544,7 +543,7 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <svg class="icon footer-icons">
+                  <svg class="icon">
                     <use href="./images/icons/sprite.svg#icon-linkedin"></use>
                   </svg>
                 </a>
@@ -555,7 +554,6 @@
           <div class="subscription-form">
 
           </div>
-        </div>
       </div>
     </footer>
     <!-- <img src="./images/svg/satellite-dish.svg" alt="icon" /> -->
