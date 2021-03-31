@@ -113,12 +113,12 @@ address {
 }
 
 .contacts-link .icon {
-    stroke: var(--secondary-color);
+    fill: var(--secondary-color);
     margin-right: 10px;
 }
 
 .contacts-link:hover .icon, .contacts-link:focus .icon {
-    stroke: var(--accent-color);
+    fill: var(--accent-color);
 }
 
 .menu-nav {
