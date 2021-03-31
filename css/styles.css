@@ -1,17 +1,19 @@
 /* Custom CSS variables */
 
 :root {
-    --main-font-family: "Roboto", sans-serif;
+    --main-font-family: 'Roboto', sans-serif;
+    --secondary-fon-family: 'Raleway', sans-serif;
     --main-bg-color: #fff;
     --main-text-color: #212121;
     --secondary-color: #757575;
-    --accent-color: #2196F3;
-    --dark-bg-color: #2F303A;
-    --icons-text-color: #AFB1B8;
+    --accent-color: #2196f3;
+    --dark-bg-color: #2f303a;
+    --icons-text-color: #afb1b8;
     --base-size: 16px;
     --soft-box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     --small-circled: 4px;
-    --soft-grey-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #6B5F5F 0%, rgba(255, 255, 255, 0) 100%), #C4C4C4;
+    --round-box: 50%;
+    --soft-grey-bg-gradient: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #6B5F5F 0%, rgba(255, 255, 255, 0) 100%), #c4c4c4;
 }
 
 html {
@@ -41,15 +43,6 @@ img {
     display: block;
     width: 100%;
     height: auto;
-}
-
-footer {
-    padding: 60px 0;
-    background-color: var(--dark-bg-color);
-    width: 100vw;
-    position: relative;
-    left: 49%;
-    margin-left: -50vw;
 }
 
 address {
@@ -82,14 +75,10 @@ address {
     align-items: center;
 }
 
-.features-flex-container {
-    display: inline-flex;
-}
-
 .features-icon-block {
     padding: 25px 100px;
     background: #F5F4FA;
-    border-radius: 4px;
+    border-radius: var(--small-circled);
 }
 
 .contacts {
@@ -165,9 +154,7 @@ address {
     background-color: var(--soft-grey-bg-gradient);
 }
 
-.features {
-    display: flex;
-    justify-content: space-between;
+.features, .works, .our-team, .regular-customers {
     padding: 95px 0;
 }
 
@@ -177,11 +164,6 @@ address {
 
 .features .list-item:not(:last-child) {
     margin-right: 20px;
-}
-
-.image-grid {
-    display: flex;
-    justify-content: space-between;
 }
 
 .link {
@@ -205,15 +187,21 @@ address {
     font-size: var(--base-size);
     line-height: 1.87;
     letter-spacing: .06em;
-    color: var(--main-text-color);
-    background-color: var(--main-bg-color);
-    border: none;
+    appearance: none;
+    border: 0;
     cursor: pointer;
     border-radius: var(--small-circled);
     padding: 10px 32px;
-    background-color: #2196f3;
+    background-color: var(--accent-color);
     color: var(--main-bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(49, 106, 230, 0.7);
+}
+
 
 .button:active {
     outline: none;
@@ -307,7 +295,7 @@ address {
 }
 
 .works {
-    padding-bottom: 95px;
+    padding-top: 0;
 }
 
 .page-title-description {
@@ -347,8 +335,6 @@ address {
 
 .our-team {
     background: #F5F4FA;
-    padding-top: 95px;
-    padding-bottom: 95px;
 }
 
 .our-team-card {
@@ -362,11 +348,7 @@ address {
 }
 
 .social-icons {
-    display: flex;
-}
-
-.social-icons-item + .social-icons-item {
-    margin-left: 10px;
+    width: 210px;
 }
 
 .social-icons-link {
@@ -374,17 +356,21 @@ address {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
+    width: 45px;
+    height: 45px;
 }
 
 .social-icons-item {
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .social-icons-item:hover {
     background-color: var(--accent-color);
+}
+
+.icon {
+    fill: var(--accent-color);
 }
 
 .social-icons .icon {
@@ -393,9 +379,19 @@ address {
     fill: var(--icons-text-color);
 }
 
-footer .social-icons .icon {
-    fill:var(--main-bg-color)
+.footer {
+    padding: 60px 0;
+    background-color: var(--dark-bg-color);
 }
+
+.footer .icon {
+    fill: var(--main-bg-color)
+}
+
+.footer .logo {
+    color: var(--main-bg-color);
+}
+
 .social-icons-link:hover .icon, .social-icons-link:focus .icon {
     fill: var(--main-bg-color);
 }
@@ -404,48 +400,44 @@ footer .social-icons .icon {
 .social-icons-link:focus {
     background-color: var(--accent-color);
 }
-    
-.customers-list-item {
-   
-    
-   
-    
-}
-
-.icon {
-    fill: var(--accent-color);
-}
 
 .customers-list-link {
-    padding: 0;
-    border: 1px solid #AFB1B8;
+    border: 1px solid #afb1b8;
     width: 170px;
     height: 90px;
-    border-radius: 4px;
+    border-radius: var(--small-circled);
     display: inline-flex; 
     justify-content: center;
     align-items: center;
-   
 }
 
-.customers-list-link:hover .icon, .customers-list-link:focus {
+.customers-list-link:hover .icon, 
+.customers-list-link:focus .icon {
     fill: var(--accent-color);
 }
-.customers-list-link:hover, .customers-list-link:focus {
-    border: 1px solid var(--accent-color);
-}
 
-/* .customers-list-item:hover,  .customers-list-item:focus{
-    color: var(--accent-color);
-} */
+.customers-list-link:hover, .customers-list-link:focus {
+    border-color: var(--accent-color);
+}
 
 .customers-list-item .icon {
-    fill: var(--icons-text-color)
+    fill: var(--icons-text-color);
 }
 
-.footer-contacts {
-    font-style: normal;
+.customers-list-link:focus {
+    outline-color: var(--accent-color); 
+}
+
+.footer {
     font-size: 14px;
+}
+
+.footer-contacts-item {
+    color: var(--main-bg-color);
+}
+
+.footer-contacts-item:not(:last-child) {
+    padding-bottom: 10px;
 }
 
 .contacts-with-logo {
@@ -458,7 +450,7 @@ footer .social-icons .icon {
 }
 
 .join-text {
-    font-size: 14px;
+    font-size: inherit;
     font-weight: 700;
     line-height: 1.15;
     padding-top: 12px;
@@ -470,21 +462,6 @@ footer .social-icons .icon {
 .subscription-form {
     flex-basis: calc(50% - 15px);
 }
-.footer-contacts-item:not(:last-child) {
-    padding-bottom: 10px;
-    color: var(--main-bg-color);
-}
-
-.footer-flex-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.regular-customers {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
 .footer-contacts-item .link {
     color: var(--secondary-color);
@@ -494,18 +471,10 @@ footer .social-icons .icon {
     color: var(--accent-color);
 }
 
-footer .logo {
-    color: var(--main-bg-color);
-}
-
-.footer-container {
-    display: block;
-}
-
 .logo {
-    font-family: Raleway;
-    font-weight: 700;
     font-size: 26px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
     line-height: 1.192;
     color: var(--main-text-color);
     margin-right: 90px;
@@ -585,6 +554,11 @@ footer .logo {
 
 .card-info {
     padding: 20px 24px;
+}
+
+.regular-customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .visually-hidden {
