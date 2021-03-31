@@ -113,7 +113,6 @@ address {
 .contacts .link {
     font-size: 14px;
     color: var(--secondary-color);
-
 }
 
 .phone {
@@ -406,40 +405,42 @@ footer .social-icons .icon {
     background-color: var(--accent-color);
 }
     
-.customers-list-item  {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 90px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
+.customers-list-item {
+   
+    
+   
+    
 }
 
-.customers-list-link {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 170px;
-    height: 90px;
-    border-radius: 4px;
-}
-
-.customers-list-link:focus {
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
-.customers-list-item:hover, .customers-list-item:focus {
-    border: 1px solid var(--accent-color);
-}
-
-.customers-list-item:hover .icon, .customers-list-item:focus .icon {
+.icon {
     fill: var(--accent-color);
 }
 
+.customers-list-link {
+    padding: 0;
+    border: 1px solid #AFB1B8;
+    width: 170px;
+    height: 90px;
+    border-radius: 4px;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.customers-list-link:hover .icon, .customers-list-link:focus {
+    fill: var(--accent-color);
+}
+.customers-list-link:hover, .customers-list-link:focus {
+    border: 1px solid var(--accent-color);
+}
+
+/* .customers-list-item:hover,  .customers-list-item:focus{
+    color: var(--accent-color);
+} */
+
 .customers-list-item .icon {
-    fill: var(--secondary-color)
+    fill: var(--icons-text-color)
 }
 
 .footer-contacts {
