@@ -187,15 +187,21 @@ address {
     font-size: var(--base-size);
     line-height: 1.87;
     letter-spacing: .06em;
-    color: var(--main-text-color);
-    background-color: var(--main-bg-color);
-    border: none;
+    appearance: none;
+    border: 0;
     cursor: pointer;
     border-radius: var(--small-circled);
     padding: 10px 32px;
-    background-color: #2196f3;
+    background-color: var(--accent-color);
     color: var(--main-bg-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 }
+
+.button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(49, 106, 230, 0.7);
+}
+
 
 .button:active {
     outline: none;
@@ -405,7 +411,8 @@ address {
     align-items: center;
 }
 
-.customers-list-link:hover .icon, .customers-list-link:focus {
+.customers-list-link:hover .icon, 
+.customers-list-link:focus .icon {
     fill: var(--accent-color);
 }
 
@@ -413,12 +420,12 @@ address {
     border-color: var(--accent-color);
 }
 
-/* .customers-list-item:hover,  .customers-list-item:focus{
-    color: var(--accent-color);
-} */
-
 .customers-list-item .icon {
-    fill: var(--icons-text-color)
+    fill: var(--icons-text-color);
+}
+
+.customers-list-link:focus {
+    outline-color: var(--accent-color); 
 }
 
 .footer {
